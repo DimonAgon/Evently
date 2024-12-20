@@ -5,3 +5,4 @@ db
 media
 .idea
 .venv
+.env
