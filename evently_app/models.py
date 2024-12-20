@@ -1,5 +1,6 @@
 
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Event(models.Model):
@@ -8,6 +9,7 @@ class Event(models.Model):
     datetime = models.DateTimeField()
     location = models.ForeignKey('Location', on_delete=models.PROTECT)
     organizer = models.ForeignKey('Organizer', on_delete=models.PROTECT)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
 class Location(models.Model):
