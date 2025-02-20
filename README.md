@@ -22,6 +22,14 @@ After cloning the repo:
 
    define POSTGRES_HOST
 
+   define EMAIL_HOST
+   
+   define EMAIL_PORT
+   
+   define EMAIL_HOST_USER
+
+   defineEMAIL_HOST_PASSWORD
+
 2. Build and run the docker container
 
 ```
