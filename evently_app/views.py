@@ -19,7 +19,7 @@ def notify_on_planning(event: Event):
         f"has been planned by {event.organizer} "
         f"on {event.datetime.date()} "
         f"at {event.datetime.time()} "
-        f"at {event.location}! "
+        f"at {event.location} palce! "
         f"{event.description}"
     )
     send_mail(
