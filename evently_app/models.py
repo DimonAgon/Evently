@@ -15,6 +15,12 @@ class Event(models.Model):
 class Location(models.Model):
     name = models.CharField(max_length=600)
 
+    def __str__(self):
+        return self.name
+
 
 class Organizer(models.Model):
     name = models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.name
