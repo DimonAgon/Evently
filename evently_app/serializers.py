@@ -12,15 +12,23 @@ class GetOrCreateSlugRelatedField(serializers.SlugRelatedField):
 
 class EventSerializer(serializers.ModelSerializer):
     user = serializers.SlugRelatedField(slug_field='username', read_only=True)
+    title = serializers.CharField(style={'placeholder': 'title'})
+    description = serializers.CharField(style={'placeholder': 'description'})
     location = GetOrCreateSlugRelatedField(
         slug_field='name',
         queryset=Location.objects.all(),
-        style={'base_template': 'textarea.html'}
+        style={
+            'base_template': 'textarea.html',
+            'placeholder': 'location'
+        }
     )
     organizer = GetOrCreateSlugRelatedField(
         slug_field='name',
         queryset=Organizer.objects.all(),
-        style={'base_template': 'textarea.html'}
+        style={
+            'base_template': 'textarea.html',
+            'placeholder': 'organizer'
+        }
     )
     class Meta:
         model = Event
