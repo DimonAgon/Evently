@@ -18,7 +18,7 @@ class EventSerializer(serializers.ModelSerializer):
         slug_field='name',
         queryset=Location.objects.all(),
         style={
-            'base_template': 'textarea.html',
+            'base_template': 'input.html',
             'placeholder': 'location'
         }
     )
@@ -26,7 +26,7 @@ class EventSerializer(serializers.ModelSerializer):
         slug_field='name',
         queryset=Organizer.objects.all(),
         style={
-            'base_template': 'textarea.html',
+            'base_template': 'input.html',
             'placeholder': 'organizer'
         }
     )
