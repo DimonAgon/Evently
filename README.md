@@ -28,7 +28,7 @@ After cloning the repo:
    
    define EMAIL_HOST_USER
 
-   defineEMAIL_HOST_PASSWORD
+   define EMAIL_HOST_PASSWORD
 
 2. Build and run the docker container
 
